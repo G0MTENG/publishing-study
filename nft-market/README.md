@@ -1,50 +1,81 @@
-# React + TypeScript + Vite
+<h1 align='center'>Vite + React + TypeScript + Eslint + Prettier Template ⚡</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create a new project with Vite, React JS, TypeScript, Eslint, Prettier in just 1 second and you don't need to setup anything.
 
-Currently, two official plugins are available:
+#### **Vercel Deploy: https://vite-react-ts-eslint-prettier.vercel.app**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://user-images.githubusercontent.com/70432453/170648662-2ff424b9-74e9-4754-a04d-512fe1496a3b.png)
 
-## Expanding the ESLint configuration
+## **Some Features 📋**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Alias Import
 
-- Configure the top-level `parserOptions` property like this:
+![image](https://user-images.githubusercontent.com/70432453/170644457-ede03cca-44e9-4543-94d3-412c9d317063.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Hook Warning
+
+![image](https://user-images.githubusercontent.com/70432453/170638708-23a20ffd-156e-494a-84be-b1e1cfdb5c93.png)
+
+Prettier Warning
+
+![image](https://user-images.githubusercontent.com/70432453/170639043-24423ed1-73cc-4730-b270-2acea1ae0c74.png)
+
+Etc...
+
+## **Using 📦**
+
+1. Clone Template
+
+```
+git clone https://github.com/igdev116/vite-react-ts-eslint-prettier.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install Packages
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```
+yarn install
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+3. Start Project
+
+```
+yarn dev
+```
+
+4. If you using git, delete the existing folder .git after cloning (open `git bash` or other terminal)
+
+```
+rm -rf .git
+```
+
+## **Options ✍️**
+
+1. Check lint
+
+```
+yarn lint
+```
+
+2. Fix lint
+
+```
+yarn lint:fix
+```
+
+3. Check prettier
+
+```
+yarn prettier
+```
+
+4. Fix prettier
+
+```
+yarn prettier:fix
+```
+
+5. Fix lint and prettier
+
+```
+yarn format
 ```
