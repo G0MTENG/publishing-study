@@ -20,6 +20,7 @@ interface IButtonProp {
 
 const ButtonStyle = styled.button`
   color: ${(props) => props.theme.colors.text4};
+  border-radius: 20px;
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -35,6 +36,7 @@ const Primary = ({ icon, text, type }: IButtonProp) => {
       style={{
         ...style,
         height: '72px',
+        padding: '20.5px 50px',
       }}
       type='button'
     >
@@ -53,6 +55,7 @@ const Secondary = ({ icon, text, type }: IButtonProp) => {
       style={{
         ...style,
         height: '68px',
+        padding: '19px 50px',
       }}
     >
       <Icon size={20} color={color} icon={icon} />
@@ -70,6 +73,7 @@ const Tertiary = ({ icon, text, type }: IButtonProp) => {
       style={{
         ...style,
         height: '46px',
+        padding: '12px 50px',
       }}
     >
       <Icon size={20} color={color} icon={icon} />

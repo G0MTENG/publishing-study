@@ -1,5 +1,7 @@
 import { useMediaQuery } from 'react-responsive'
 import type { PropsWithChildren } from 'react'
+import styled from 'styled-components'
+import { Footer, Header, Headline, MarketPlace } from './components/templates'
 
 const Desktop = ({ children }: PropsWithChildren) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 })
@@ -14,13 +16,32 @@ const Mobile = ({ children }: PropsWithChildren) => {
   return isMobile ? children : null
 }
 
+const AppLayout = styled.div`
+  width: 100vw;
+`
+
 function App() {
   return (
-    <>
-      <Desktop></Desktop>
-      <Tablet></Tablet>
-      <Mobile></Mobile>
-    </>
+    <AppLayout>
+      <Desktop>
+        <Header.Desktop />
+        <Headline.Desktop />
+        <MarketPlace.Desktop />
+        <Footer.Desktop />
+      </Desktop>
+      <Tablet>
+        <Header.Tablet />
+        <Headline.Tablet />
+        <MarketPlace.Tablet />
+        <Footer.Tablet />
+      </Tablet>
+      <Mobile>
+        <Header.Mobile />
+        <Headline.Mobile />
+        <MarketPlace.Mobile />
+        <Footer.Mobile />
+      </Mobile>
+    </AppLayout>
   )
 }
 
