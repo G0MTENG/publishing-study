@@ -11,3 +11,9 @@ export const Flex = styled.div<{ gap?: number }>`
   gap: ${(props) => props.gap}px;
   align-items: center;
 `
+
+export const FlexColumn = styled.div<{ gap?: number }>`
+  display: flex;
+  flex-direction: column;
+  gap: ${(props) => props.gap}px;
+`

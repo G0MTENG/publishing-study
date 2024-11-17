@@ -141,3 +141,17 @@ button {
   overflow: visible;
   cursor: pointer;
 }
+
+input:focus {
+  outline: none;
+}
+
+input {
+  border: none;
+  padding: none;
+  background-color: inherit;
+
+  ::placeholder {
+    color: #858584;
+  }
+}
