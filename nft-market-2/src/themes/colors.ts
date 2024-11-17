@@ -1,15 +1,7 @@
-const background = {
-  primary: '#2B2B2B',
-  secondary: '#3B3B3B',
-}
-
-const text = {
-  primary: '#FFFFFF',
-  secondary: '#858584',
-}
-
 export const colors = {
-  background,
-  text,
+  text1: '#2B2B2B',
+  text2: '#3B3B3B',
+  text3: '#858584',
+  text4: '#FFFFFF',
   action: '#A259FF',
 }

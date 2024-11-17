@@ -592,13 +592,13 @@ const icons = {
   Instagram,
 }
 
-type IconMap = keyof typeof icons
-export const IconWrapper = ({
+export type IconMap = keyof typeof icons
+export const Icon = ({
   size = 32,
   color = 'white',
   icon,
 }: IconWrapperProps & { icon: IconMap }) => {
-  const Icon = icons[icon]
+  const IconComponent = icons[icon]
   return (
     <svg
       width={size}
@@ -607,7 +607,7 @@ export const IconWrapper = ({
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <Icon color={color} />
+      <IconComponent color={color} />
     </svg>
   )
 }
