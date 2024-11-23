@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 export const avatars: string[] = [
   'https://s3-alpha-sig.figma.com/img/9acf/2677/568b38bc98ba36dbd43c768c40de6716?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZjhDLqgajmh1qgOMoSKBeDThC5pheHm9a~Ppn7uVlf-3TrxTN4nseg4pYHkCyhUi4rOLnnA0-3KoZcB1-mpRNoTHdM0TlvJtmsjU0-M5TDoH7JsOCH9K6TpCcC3b8mY625dB9UZV0RhzdPun57rnT-uLfDhVMeIx3zyXgrZIFU6XAEVIz7POUfL9YLnR-OjhGckKvjJUjT8mAs-nQa7N~Q7sYmACxqN2Yg8bJ872-MBuKdvTG3w9D-Kq5c9pqnIn96xGGtCg4dGGwDrfpIQ40jKp1gF2XbSRhAkG26hoKVP~7A5W~w09ZzUzd5bk5bRnuBAKm4glzhd2O~Qv6ws4aA__',
   'https://s3-alpha-sig.figma.com/img/426c/ea39/cb7585dba1b58ad1b137d50b7424eb72?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JYLU46-pMaMQoNesmAiYWfNIN5iXOuEdRFxBeJONf9zSk4jidVp92~I28eYu1b6La9f-8RmTT54eFjhQtnNhZ8SXpr88~pEz0ZmBJdWNkgtH8LS8bu7-D2i~LD0DvTNAiQqoBE5x3XlyaRUDoD5kp9lEvOPyvIfMLebd-iOM2qNoCoWH7a2Fzuzvqu2~b1NcAkFNWTSETUlEyL8qu7njawyoM7J63jW4E5xvL-gLJxPI2vvj8lzeT3x4aL~dtXAITeQDeHWaW7l7v5lJNaUPSB2s7Y8VPjJErLtX54jFy6k-aBH35RNzeiNYzpBe20k6tAzSmYXonbdPlAqbPFdrvQ__',
@@ -20,3 +22,14 @@ export const avatars: string[] = [
   'https://s3-alpha-sig.figma.com/img/cf8a/7c57/b3a69bbc8926f1f71a4d0f67b5011b04?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KJvId1naAanch-d14y9N07Q6bs7oLd95KuuwD32uJlfqwe3592D8hyxxiThe4bqJoSzQYCpI9QliKhj16QdEscFJHAks4pGaB38er5j0wMN13x0NzCQoZ0sl4Nm7jhN4Fe2g9s-abjPdlKU7NRmg52CgwxjZSOHxIdTrKQD9EpvYU7UphNNSTG5fYA3DgO-GgqL1WnH8ugqa~PMyg38uDEDz4HW-4wD1-XcQck2v7z1C6Cm~sSjZxhtcgNo7R8P~An100btzEvxO-UyIYE9vu7EKSLQEd4DKHxnUdYEjIGvVIqW8HkUkNuY5Rhr018nb9cOBIZDp6Vgan1dVMT9PJA__',
   'https://s3-alpha-sig.figma.com/img/6f2d/fe69/21b6620c5678c5b0215637f93ef42f6f?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HbvhsvBXVCgeEINinVepiwpSz5HZGidH7WNe5ye8Y7XqvtBJlctf3KPoa7WU3Q9MkfuJPgl7NIayz9qokDLSx8EYaImWos5dlvFEg2zpI2wQrOB9S21CkmgNJntDZLOEP9BGXq8It6Vg5PrqCx-ROSTgKC3q8J0Wcy63AawZN0hx5-TTb3x~pUSoFtFB7EIV8BumqmbhprpVcwA84I7uN36ED5q0R4wUO82jSbT6hFVYXyp1IFUU4h6h9pKDAL2GIM7sw3S3NXZOvH6VFz0B-llmapfV6q-dtGT2nD78Iz-0WFvfr5mQJNOz32dna34X25nk3BNyDrLEy07Jo0scJg__',
 ]
+
+const AvartarWapper = styled.img`
+  width: 24px;
+  height: 24px;
+  border-radius: 120px;
+`
+
+export const Avartar = () => {
+  const randomAvatarUrl = avatars[Math.floor(Math.random() * avatars.length)]
+  return <AvartarWapper src={randomAvatarUrl} />
+}

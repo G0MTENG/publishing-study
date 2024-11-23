@@ -1,6 +1,6 @@
 import { colors } from '@/themes/colors'
 import { Flex, FlexBetween, Icon, SpaceMono, WorkSans } from '../atoms'
-import { Button } from '../modules/IconButton'
+import { Button } from '../modules'
 
 const Desktop = () => {
   return (

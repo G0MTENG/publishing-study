@@ -13,9 +13,10 @@ const Style = {
   outlined: outlinedStyle,
 }
 interface IButtonProp {
-  icon: IconMap
+  icon?: IconMap
   text: string
   type: keyof typeof Style
+  full?: boolean
 }
 
 const ButtonStyle = styled.button`
@@ -27,7 +28,7 @@ const ButtonStyle = styled.button`
   align-items: center;
 `
 
-const Primary = ({ icon, text, type }: IButtonProp) => {
+const Primary = ({ icon, text, type, full }: IButtonProp) => {
   const style = Style[type]
   const color = type === 'filled' ? colors.text4 : colors.action
 
@@ -35,18 +36,19 @@ const Primary = ({ icon, text, type }: IButtonProp) => {
     <ButtonStyle
       style={{
         ...style,
+        width: full ? '100%' : '',
         height: '72px',
         padding: '20.5px 50px',
       }}
       type='button'
     >
-      <Icon size={20} color={color} icon={icon} />
+      {icon && <Icon size={20} color={color} icon={icon} />}
       <WorkSans.H5>{text}</WorkSans.H5>
     </ButtonStyle>
   )
 }
 
-const Secondary = ({ icon, text, type }: IButtonProp) => {
+const Secondary = ({ icon, text, type, full }: IButtonProp) => {
   const style = Style[type]
   const color = type === 'filled' ? colors.text4 : colors.action
 
@@ -54,17 +56,18 @@ const Secondary = ({ icon, text, type }: IButtonProp) => {
     <ButtonStyle
       style={{
         ...style,
+        width: full ? '100%' : '',
         height: '68px',
         padding: '19px 50px',
       }}
     >
-      <Icon size={20} color={color} icon={icon} />
+      {icon && <Icon size={20} color={color} icon={icon} />}
       <WorkSans.Text style={{ fontWeight: '600' }}>{text}</WorkSans.Text>
     </ButtonStyle>
   )
 }
 
-const Tertiary = ({ icon, text, type }: IButtonProp) => {
+const Tertiary = ({ icon, text, type, full }: IButtonProp) => {
   const style = Style[type]
   const color = type === 'filled' ? colors.text4 : colors.action
 
@@ -72,11 +75,12 @@ const Tertiary = ({ icon, text, type }: IButtonProp) => {
     <ButtonStyle
       style={{
         ...style,
+        width: full ? '100%' : '',
         height: '46px',
         padding: '12px 50px',
       }}
     >
-      <Icon size={20} color={color} icon={icon} />
+      {icon && <Icon size={20} color={color} icon={icon} />}
       <WorkSans.Text style={{ fontWeight: '600' }}>{text}</WorkSans.Text>
     </ButtonStyle>
   )

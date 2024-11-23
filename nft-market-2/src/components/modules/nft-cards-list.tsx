@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { NFTCard } from '../modules/NFTCard'
+import { NFTCard } from '../modules'
 import { avatars } from '../atoms'
 
 const images = [
@@ -13,89 +12,20 @@ const images = [
   'https://s3-alpha-sig.figma.com/img/67e1/f6fe/e50c7ead5b8ab11fc9ca9b560fadd34e?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kKLCUfXUqowD7OMMPj1q0cEzp71FtIbzIN4doZbg5Y-8FI~Nyzo2uTrwC4rBUqYkBq5lhYv3WlN4l49o0ZUiMfOQ~OhITvGwv3Ygo88onicrH0eFLA7lV-wSOo1GXx2ZkREtjF1~o1L3XZ7QtCDMwP-KUy4rRVICRMXeOlFLvHYbVOnR1redTBzpWpdXJFlvSsByCYEZZ4xixnoDWBE~djKOtzDyxckqP8J2TfWSIXRjnuTm97TpU5YUeUSiJamx6bABh-zAeSwvyQqBsFCVuxviGRQO~MtCKTiPBnNWxMR-lcZ7RtAhG44qrcelKnImYvaLKgZxURjiEk-WiIR1qg__',
 ]
 
-const Container = styled.div<{ padding: string; rowNumber: number }>`
-  width: 100%;
-  padding: ${(props) => props.padding};
-  background-color: ${(props) => props.theme.colors.text2};
-  display: grid;
-  grid-template-columns: repeat(${(props) => props.rowNumber}, 1fr);
-  gap: 30px;
-`
-
-const Desktop = () => {
-  return (
-    <Container padding='60px 115px' rowNumber={3}>
-      {Array(10)
-        .fill(0)
-        .map((_, index) => {
-          return (
-            <NFTCard
-              key={index}
-              item={{
-                imageUrl: images[0],
-                title: 'Happy Robot 032',
-                profileImageUrl: avatars[0],
-                profile: 'BeKind2Robots',
-                price: 1.63,
-                highest: 0.33,
-              }}
-            />
-          )
-        })}
-    </Container>
-  )
-}
-
-const Tablet = () => {
-  return (
-    <Container padding='60px 115px' rowNumber={2}>
-      {Array(10)
-        .fill(0)
-        .map((_, index) => {
-          return (
-            <NFTCard
-              key={index}
-              item={{
-                imageUrl: images[0],
-                title: 'Happy Robot 032',
-                profileImageUrl: avatars[0],
-                profile: 'BeKind2Robots',
-                price: 1.63,
-                highest: 0.33,
-              }}
-            />
-          )
-        })}
-    </Container>
-  )
-}
-
-const Mobile = () => {
-  return (
-    <Container padding='40px 30px' rowNumber={1}>
-      {Array(10)
-        .fill(0)
-        .map((_, index) => {
-          return (
-            <NFTCard
-              key={index}
-              item={{
-                imageUrl: images[0],
-                title: 'Happy Robot 032',
-                profileImageUrl: avatars[0],
-                profile: 'BeKind2Robots',
-                price: 1.63,
-                highest: 0.33,
-              }}
-            />
-          )
-        })}
-    </Container>
-  )
-}
-
-export const MarketPlace = {
-  Desktop,
-  Tablet,
-  Mobile,
+export const NFTCardsList = () => {
+  return Array(10)
+    .fill(0)
+    .map((_, index) => (
+      <NFTCard
+        key={index}
+        item={{
+          imageUrl: images[0],
+          title: 'Happy Robot 032',
+          profileImageUrl: avatars[0],
+          profile: 'BeKind2Robots',
+          price: 1.63,
+          highest: 0.33,
+        }}
+      />
+    ))
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { FlexColumn, WorkSans } from '../atoms'
-import { SearchInput } from '../modules/SearchInput'
+import { SearchInput } from '../modules'
 
 const Container = styled.div<{ padding: string }>`
   width: 100%;
