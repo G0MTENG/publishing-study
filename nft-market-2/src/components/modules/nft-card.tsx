@@ -18,8 +18,8 @@ const Image = styled.img`
 const ContentWrapper = styled.div`
   width: 100%;
   padding: 20px 30px 25px;
-  background-color: ${(props) => props.theme.colors.text1};
   border-radius: 0 0 20px 20px;
+  background-color: ${(props) => props.theme.colors.text2};
 `
 
 const ProfileImage = styled.img`

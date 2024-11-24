@@ -2,6 +2,10 @@ import { useMediaQuery } from 'react-responsive'
 import type { PropsWithChildren } from 'react'
 import { Footer, Header, Headline, MarketPlace, Section } from './components/templates'
 
+// CSS Media 쿼리와의 차이점은 js에서 일어나는 것
+// SSR 시에 Hydration 중 불일치 문제가 일어날 수 있음.
+// React18 useViewportWidth 훅이 있다고 하는데 좀 더 알아보면 좋을거 같음
+
 const Desktop = ({ children }: PropsWithChildren) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 })
   return isDesktop ? children : null
