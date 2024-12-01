@@ -148,8 +148,10 @@ input:focus {
 
 input {
   border: none;
-  padding: none;
   background-color: inherit;
+  border: none;
+  outline: none;
+  padding: 0;
 
   ::placeholder {
     color: #858584;
