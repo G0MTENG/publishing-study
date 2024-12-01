@@ -19,9 +19,9 @@
 
 ### 팀원
 
-| 이름     | 역할   | 깃허브 링크                                                                                   |
+| 이름     | 역할   | 작업 깃허브 링크                                                                                   |
 |----------|--------|----------------------------------------------------------------------------------------------|
-| 이성우   | 팀장   | [깃허브 링크](https://github.com/devisnojam/responsive-web-publishing)                        |
-| 공태윤   | 팀원   | [깃허브 링크](https://github.com/G0MTENG/publishing-study)                                   |
-| 박진아   | 팀원   | [깃허브 링크](https://github.com/dev-hamster/publishing-study)                               |
-| 조세림   | 팀원   | [깃허브 링크](https://github.com/limlimjo/responsive_prac)                                   |
+| 이성우   | 팀장   | [🔗](https://github.com/devisnojam/responsive-web-publishing)                        |
+| 공태윤   | 팀원   | [🔗](https://github.com/G0MTENG/publishing-study)                                   |
+| 박진아   | 팀원   | [🔗](https://github.com/dev-hamster/publishing-study)                               |
+| 조세림   | 팀원   | [🔗](https://github.com/limlimjo/responsive_prac)                                   |
