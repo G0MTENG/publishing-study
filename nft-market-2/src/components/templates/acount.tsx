@@ -37,10 +37,10 @@ const Desktop = () => {
             }}
           >
             <FlexColumn gap={15}>
-              <Input icon='User' placeholder='Username' />
-              <Input icon='EnvelopSimple' placeholder='Email Address' />
-              <Input icon='LockKey' placeholder='Password' />
-              <Input icon='LockKey' placeholder='Confirm Password' />
+              <Input icon='User' type='text' placeholder='Username' />
+              <Input icon='EnvelopSimple' type='email' placeholder='Email Address' />
+              <Input icon='LockKey' type='password' placeholder='Password' />
+              <Input icon='LockKey' type='password' placeholder='Confirm Password' />
             </FlexColumn>
             <Button.Tertiary text='Create account' type='filled' />
           </FlexColumn>
