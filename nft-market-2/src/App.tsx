@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { Week3 } from './week-3'
-// import { Week2 } from './week-2'
+import { Week4 } from './pages'
 
 const AppLayout = styled.div`
   width: 100vw;
@@ -9,7 +8,7 @@ const AppLayout = styled.div`
 function App() {
   return (
     <AppLayout>
-      <Week3 />
+      <Week4 />
     </AppLayout>
   )
 }
